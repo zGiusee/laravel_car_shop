@@ -1,31 +1,33 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div>
-        <table class="table my-table-style">
+    <div class="container my-5">
+        <div class="my-title my-3">
+            All cars
+        </div>
+        <table class="table table-striped rounded my-table-style">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">PRICE</th>
-                    <th scope="col">MODEL</th>
-                    <th scope="col">TOOLS</th>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col">Tools</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($cars as $car)
-                    <tr>
-                        <th scope="row">{{ $car->id }}</th>
-                        <td>{{ $car->price }}</td>
-                        <td>{{ $car->model }}</td>
-                        <td>
-                            <button class="delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal" type="button"
-                                data-car-id="{{ $car->id }}">
-                                Delete
-                            </button>
-
-                        </td>
-                    </tr>
-                @endforeach
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="delete_button">Edit</button>
+                        <button class="delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal" type="button">
+                            {{-- data-car-id="{{ $car->id }}"> --}} Delete
+                        </button>
+                    </td>
+                </tr>
             </tbody>
         </table>
         @include('admin.partials.delete_modal')
