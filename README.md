@@ -1,2 +1,2 @@
 Database: 
-<img src="{{ Vite::asset('resource/img/car_db.png') }}">
+<img src="resource/img/car_db.png">
