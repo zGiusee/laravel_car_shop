@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container my-5">
+    <<<<<<< HEAD <div class="container my-5">
         <div class="my-title my-3">
             All cars
         </div>
@@ -22,6 +22,7 @@
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>
+                        {{-- <a href="{{ route('admin.cars.show', ['car' => $car->id]) }}">Details</a> --}}
                         <button class="delete_button">Edit</button>
                         <button class="delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal" type="button">
                             {{-- data-car-id="{{ $car->id }}"> --}} Delete
@@ -31,5 +32,5 @@
             </tbody>
         </table>
         @include('admin.partials.delete_modal')
-    </div>
-@endsection
+        </div>
+    @endsection
