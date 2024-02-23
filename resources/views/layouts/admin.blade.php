@@ -93,7 +93,14 @@
         </nav>
 
         <main class="">
-            @yield('content')
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-9">
+                    @yield('content')
+                </div>
+            </div>
         </main>
     </div>
 </body>
