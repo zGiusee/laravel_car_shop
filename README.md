@@ -1,2 +1,2 @@
-Database: 
-<img src="resource/img/car_db.png">
+Database: <br>
+<img src="./resources/img/car_db.png">
