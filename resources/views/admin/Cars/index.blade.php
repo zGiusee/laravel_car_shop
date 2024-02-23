@@ -5,31 +5,29 @@
         <table class="table my-table-style">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">MODEL</th>
+                    <th scope="col">TOOLS</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @foreach ($cars as $car)
+                    <tr>
+                        <th scope="row">{{ $car->id }}</th>
+                        <td>{{ $car->price }}</td>
+                        <td>{{ $car->model }}</td>
+                        <td>
+                            <button class="delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal" type="button"
+                                data-car-id="{{ $car->id }}">
+                                Delete
+                            </button>
+
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
+        @include('admin.partials.delete_modal')
     </div>
 @endsection
