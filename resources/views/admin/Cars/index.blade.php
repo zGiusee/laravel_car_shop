@@ -2,34 +2,32 @@
 
 @section('content')
     <div>
+        <div class="d-flex justify-content-between align-items-center ">
+            <h2>Cars</h2>
+            <a href="{{ route('admin.cars.create') }}" class="btn btn-primary">Add Car</a>
+        </div>
         <table class="table my-table-style">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">MODEL</th>
+                    <th scope="col">TOOLS</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @foreach ($cars as $car)
+                    <tr>
+                        <th scope="row">{{$car->id}}</th>
+                        <td>{{$car->price}}</td>
+                        <td>{{$car->model}}</td>
+                        <td>
+                            <a href="{{ route('admin.cars.edit', ['car' => $car->id]) }}" class="btn btn-primary ">Mod</a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
+
     </div>
 @endsection
