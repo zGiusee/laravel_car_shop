@@ -94,10 +94,17 @@
 
         <main class="">
             <div class="row">
-                <div class="col-3">
-
+                <div class="col-2 my-sidebar">
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="bi bi-list me-2"></i> Dahsboard
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.cars.index') }}"> <i class="bi bi-table me-2"></i> Cars</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-9">
+                <div class="col-10">
                     @yield('content')
                 </div>
             </div>
