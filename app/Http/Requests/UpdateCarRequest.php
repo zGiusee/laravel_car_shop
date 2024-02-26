@@ -13,7 +13,7 @@ class UpdateCarRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,24 @@ class UpdateCarRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'price' => 'required|numeric|min:10000|max:50000',
+            'model' => 'required|string|max:50',
+            'km' => 'nullable|numeric|min:0|max:100000',
+            'img' => 'nullable|url',
+            'immatricolation_year' => 'nullable|numeric',
+            'plate' => 'required|unique:cars',
+            'year' => 'required|numeric',
+            'color' => 'required|string|max:50',
+            'fuel_type' => 'required|string',
+            'used' => 'required|boolean',
+            'description' => 'nullable|string',
+            'seats' => 'required|numeric|min:2|max:7',
+            'transmission' => 'required|string',
+            'owners' => 'required|numeric|min:0|max:3',
+            'engine_size' => 'required|numeric',
+            'power' => 'required|string',
+            'paint_type' => 'nullable|string',
+            'material_type' => 'nullable|string',
         ];
     }
 }
