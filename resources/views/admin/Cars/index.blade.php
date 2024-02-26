@@ -8,7 +8,6 @@
         <table class="table table-striped rounded my-table-style">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">Price</th>
                     <th scope="col">Model</th>
