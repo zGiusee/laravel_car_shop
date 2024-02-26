@@ -73,5 +73,4 @@ class StoreCarRequest extends FormRequest
             'engine_size.numeric' => 'La cilindrata del motore deve essere un numero.',
         ];
     }
-    
 }
