@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <<<<<<< HEAD <div class="container my-5">
+    <div class="container my-5">
         <div class="my-title my-3">
             All cars
         </div>
