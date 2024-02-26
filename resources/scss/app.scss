@@ -53,7 +53,7 @@
 }
 
 
-.delete_button {
+.my_button {
     border-radius: 5px;
     padding: 3px 8px;
     background-color: #566f8d;
@@ -62,6 +62,7 @@
     font-family: 'Roboto Condensed';
     font-size: 12px;
     text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
         background-color: #7191b6;

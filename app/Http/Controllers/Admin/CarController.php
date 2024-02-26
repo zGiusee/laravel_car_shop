@@ -38,7 +38,7 @@ class CarController extends Controller
      */
     public function store(StoreCarRequest $request)
     {
-        
+
         $cars = new Car();
         $form_data = $request->all();
         $cars->fill($form_data);
@@ -79,7 +79,7 @@ class CarController extends Controller
     public function update(UpdateCarRequest $request, Car $car)
     {
         $form_data = $request->all();
-        $cars->update($form_data);
+        $car->update($form_data);
 
         return redirect()->route('admin.cars.index', ['car' =>  $car->id]);
     }

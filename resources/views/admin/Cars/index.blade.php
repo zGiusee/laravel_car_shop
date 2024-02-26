@@ -20,13 +20,13 @@
                         <td>{{ $car->price }}</td>
                         <td>{{ $car->model }}</td>
                         <td>
-                            {{-- <a href="{{ route('admin.cars.show', ['car' => $car->id]) }}">Details</a> --}}
-                            <button class="delete_button">Edit</button>
-                            <button class="delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal"
-                                type="button">
-                                {{-- data-car-id="{{ $car->id }}"> --}} Delete
+                            <a class="my_button" href="{{ route('admin.cars.show', ['car' => $car->id]) }}">Details</a>
+
+                            <button class="my_button delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal"
+                                type="button" data-car-id="{{ $car->id }}"> Delete
                             </button>
-                            <a href="{{ route('admin.cars.edit', ['car' => $car->id]) }}" class="btn btn-primary ">Mod</a>
+
+                            <a class="my_button" href="{{ route('admin.cars.edit', ['car' => $car->id]) }}">Mod</a>
                         </td>
                     </tr>
                 @endforeach
