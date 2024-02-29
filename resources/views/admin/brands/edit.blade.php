@@ -4,8 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mt-3">
-                <form action="{{ route('admin.brand.store') }}" method="post">
+                <form action="{{ route('admin.brands.update', ['brand' => $brand->id]) }}" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="form-group mt-3">
                         <label for="name" class="control-label">Name:</label>
                         <input required type="text" name="name" id="name" class="form-control">
