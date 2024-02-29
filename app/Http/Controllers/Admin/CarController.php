@@ -44,6 +44,11 @@ class CarController extends Controller
         $cars->fill($form_data);
 
         $cars->save();
+
+        // if ($request->has('optionals')) {
+        //     $cars->optionals()->attach($form_data['optional']);
+        // };
+
         return redirect()->route('admin.cars.index');
     }
 
@@ -66,6 +71,11 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
+
+        // if ($request->has('optionals')) {
+        //     $cars->optionals()->sync($form_data['optional']);
+        // };
+
         return view('admin.cars.edit', compact('car'));
     }
 

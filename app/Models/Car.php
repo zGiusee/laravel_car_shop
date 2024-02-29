@@ -4,10 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Optional;
+use PhpOption\Option;
+use App\Models\Brand;
 
 class Car extends Model
 {
     use HasFactory;
+
     protected $fillable =
     [
         'price',
@@ -28,5 +32,16 @@ class Car extends Model
         'power',
         'paint_type',
         'material_type',
+        'brand_id'
     ];
+
+    public function optionals()
+    {
+        return $this->belongsToMany(Optional::class);
+    }
+
+    public function brands()
+    {
+        return $this->belongsTo(Brand::class);
+    }
 }

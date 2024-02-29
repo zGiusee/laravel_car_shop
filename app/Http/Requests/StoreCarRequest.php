@@ -42,6 +42,7 @@ class StoreCarRequest extends FormRequest
             'power' => 'required|string',
             'paint_type' => 'nullable|string',
             'material_type' => 'nullable|string',
+            'brand_id' => 'required|exists:brands,id'
         ];
     }
     public function messages()
@@ -71,6 +72,7 @@ class StoreCarRequest extends FormRequest
             'owners.max' => 'Il numero massimo di proprietari è :max.',
             'engine_size.required' => 'La cilindrata del motore è obbligatoria.',
             'engine_size.numeric' => 'La cilindrata del motore deve essere un numero.',
+            'brand_id.required' => 'Seleziona di quale brand è la macchina!'
         ];
     }
 }
