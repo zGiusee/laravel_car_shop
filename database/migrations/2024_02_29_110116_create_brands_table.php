@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
+            $table->string('name', 80);
+            $table->string('office_number', 30);
+            $table->string('email', 100);
+            $table->string('website', 100);
+            $table->string('office_address', 100);
         });
     }
 

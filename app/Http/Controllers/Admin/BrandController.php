@@ -25,9 +25,11 @@ class BrandController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
+   
+        {
+            return view('admin.brand.create');
+        }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -58,9 +60,11 @@ class BrandController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Brand $brand)
-    {
-        //
-    }
+    
+        {
+            return view('admin.brand.edit', compact('brand'));
+        }
+    
 
     /**
      * Update the specified resource in storage.
