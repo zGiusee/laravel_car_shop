@@ -39,7 +39,12 @@ class BrandController extends Controller
      */
     public function store(StoreBrandRequest $request)
     {
-        //
+        $brands = new Brand();
+        $form_data = $request->all();
+        $brands->fill($form_data);
+
+        $brands->save();
+        return redirect()->route('admin.brands.index');
     }
 
     /**
