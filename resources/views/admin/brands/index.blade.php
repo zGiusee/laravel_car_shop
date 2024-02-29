@@ -26,8 +26,8 @@
                         <td>
                             <a class="my_button" href="{{ route('admin.brands.show', ['brand' => $brand->id]) }}">Details</a>
 
-                            <button class="my_button delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal"
-                                type="button" data-id="{{ $brand->id }}" data-name="{{ $brand->name }}" data-type="admin.brands"> Delete
+                            <button class="my_button delete_button" data-bs-toggle="modal" data-bs-target="#brands_delete_modal"
+                                type="button" data-id="{{ $brand->id }}" data-name="{{ $brand->name }}" data-type="brands"> Delete
                             </button>
 
                             <a class="my_button" href="{{ route('admin.brands.edit', ['brand' => $brand->id]) }}">Mod</a>
@@ -36,5 +36,5 @@
                 @endforeach
             </tbody>
         </table>
-        @include('admin.partials.delete_modal')
+        @include('admin.brands.partials.brands_delete_modal')
     @endsection
