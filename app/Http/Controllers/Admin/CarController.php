@@ -7,6 +7,7 @@ use App\Models\Car;
 use App\Models\Optional;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
+use PhpOption\Option;
 
 class CarController extends Controller
 {
@@ -42,6 +43,7 @@ class CarController extends Controller
     public function store(StoreCarRequest $request)
     {
 
+
         $cars = new Car();
         $form_data = $request->all();
         $cars->fill($form_data);
@@ -75,12 +77,13 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
+        $optionals = Optional::all();
 
         // if ($request->has('optionals')) {
         //     $cars->optionals()->sync($form_data['optional']);
         // };
 
-        return view('admin.cars.edit', compact('car'));
+        return view('admin.cars.edit', compact('car', 'optionals'));
     }
 
     /**
