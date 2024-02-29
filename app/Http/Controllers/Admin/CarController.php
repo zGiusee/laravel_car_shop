@@ -40,6 +40,7 @@ class CarController extends Controller
     {
 
         $cars = new Car();
+        
         $form_data = $request->all();
         $cars->fill($form_data);
 
