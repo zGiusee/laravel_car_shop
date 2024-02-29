@@ -13,7 +13,7 @@ class StoreOptionalRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class StoreOptionalRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:100',
+            'price' => 'required|numeric'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.max' => 'Il nome dell\'optional non può essere più lungo di 100 caratteri!',
+            'name.required' => 'Il nome dell\'optional è obbligatorio!',
+            'price.required' => 'Il prezzo dell\'optional è obbligatorio',
+            'price.numeric' => 'Il prezzo dell\'optional deve essere numerico!'
         ];
     }
 }
