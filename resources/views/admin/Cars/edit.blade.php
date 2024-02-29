@@ -47,6 +47,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group mt-3">
                         <label for="fuel_type">fuel_type:</label>
                         <input required type="text" name="fuel_type" id="fuel_type" placeholder="fuel_type"
@@ -55,6 +56,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group mt-3">
                         <label for="used">used:</label>
                         <input required type="text" name="used" id="used" placeholder="used"
@@ -63,6 +65,27 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
+                    <div class="form-group mt-3">
+                        <label for="optional">Select Optional</label>
+                        <div>
+                            @foreach ($optionals as $optional)
+                                <div class="form-check-inline">
+                                    @if ($errors->any())
+                                        <input type="checkbox" name="optionals[]" id="optional-{{ $optional->id }}"
+                                            class="form-check-input" value="{{ $optional->id }}"
+                                            {{ is_array($optional->id, old('optionals')) ? 'checked' : '' }}>
+                                    @else
+                                        <input type="checkbox" name="optionals[]" id="optional-{{ $optional->id }}"
+                                            class="form-check-input" value="{{ $optional->id }}"
+                                            {{ $car->optionals->contains($optional->id) ? 'checked' : '' }}>
+                                    @endif
+                                    <label for="" class="form-check-label">{{ $optional->name }}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
                     <div class="form-group mt-3">
                         <label for="seats">seats:</label>
                         <input required type="text" name="seats" id="seats" placeholder="seats"
@@ -71,6 +94,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group mt-3">
                         <label for="transmission">transmission:</label>
                         <input required type="text" name="transmission" id="transmission" placeholder="transmission"
@@ -80,6 +104,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group mt-3">
                         <label for="engine_size">engine_size:</label>
                         <input required type="text" name="engine_size" id="engine_size" placeholder="engine_size"
@@ -89,6 +114,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group mt-3">
                         <button type="submit" class="btn btn-sm btn-primary">Save</button>
                     </div>
