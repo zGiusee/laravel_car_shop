@@ -9,8 +9,8 @@ use App\Models\Car;
 class Brand extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
+    protected $fillable =
+    [
         'name',
         'office_number',
         'email',
