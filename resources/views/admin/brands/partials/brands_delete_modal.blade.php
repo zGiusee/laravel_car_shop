@@ -1,4 +1,4 @@
-<div class="modal" id="delete_modal" tabindex="-1">
+<div class="modal" id="brands_delete_modal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <p>
-                    Sei sicuro di voler eliminare la macchina con id <span id="space"></span>? 
+                    Sei sicuro di voler eliminare il brand con id <span id="space"></span>? 
                 </p>
             </div>
             <div class="modal-footer">
