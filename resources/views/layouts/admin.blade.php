@@ -102,7 +102,7 @@
                 <div class="col-2 my-sidebar">
                     <ul class="list-unstyled">
                         <li>
-                            <i class="bi bi-list me-2"></i> Dahsboard
+                            <i class="bi bi-list me-2"></i> Dashboard
                         </li>
                         <li>
                             <a href="{{ route('admin.cars.index') }}"> <i class="bi bi-table me-2"></i> Cars</a>
