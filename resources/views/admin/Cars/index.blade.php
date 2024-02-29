@@ -5,6 +5,9 @@
         <div class="my-title my-3">
             All cars
         </div>
+        <div class="my-3">
+            <a class="my_button" href="{{ route('admin.cars.create') }}">Create</a>
+        </div>
         <table class="table table-striped rounded my-table-style">
             <thead>
                 <tr>
