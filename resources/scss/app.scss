@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 // $grey: #5623;
@@ -17,7 +17,7 @@
     height: 100vh;
     padding: 30px;
     border-right: 10px solid #e2e2e2;
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     text-transform: uppercase;
     font-size: 20px;
 
@@ -33,26 +33,23 @@
             text-decoration: underline;
         }
     }
-
 }
 
 .my-title {
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     font-size: 40px;
     text-transform: uppercase;
 }
 
 .my-table-style {
-
     border: 1px solid lightgray;
     border-radius: 30px;
 
     th {
-        font-family: 'Roboto Condensed';
+        font-family: "Roboto Condensed";
         text-transform: uppercase;
     }
 }
-
 
 .my_button {
     border-radius: 5px;
@@ -60,7 +57,7 @@
     background-color: #566f8d;
     color: white;
     border: 1px solid white;
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
@@ -68,4 +65,14 @@
     &:hover {
         background-color: #7191b6;
     }
+}
+
+.my_icon_margin {
+    margin-left: 22px;
+}
+
+.image_container {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
 }

@@ -14,6 +14,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Price</th>
                     <th scope="col">Model</th>
+                    <th scope="col">Tools</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +27,8 @@
                             <a class="my_button" href="{{ route('admin.cars.show', ['car' => $car->id]) }}">Details</a>
 
                             <button class="my_button delete_button" data-bs-toggle="modal" data-bs-target="#delete_modal"
-                                type="button" data-id="{{ $car->id }}" data-name="{{ $car->model }}" data-type="cars"> Delete
+                                type="button" data-id="{{ $car->id }}" data-name="{{ $car->model }}"
+                                data-type="cars"> Delete
                             </button>
 
                             <a class="my_button" href="{{ route('admin.cars.edit', ['car' => $car->id]) }}">Mod</a>

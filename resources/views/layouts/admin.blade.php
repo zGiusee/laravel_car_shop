@@ -116,7 +116,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-10">
+                <div class="col-10 p-0">
                     @yield('content')
                 </div>
             </div>
