@@ -11,17 +11,20 @@ deleteButtons.forEach((button) => {
     button.addEventListener('click', function () {
 
         // Recupero l'id della car
-        const car_id = button.getAttribute('data-car-id');
+        let id = button.getAttribute('data-id');
+        let name = button.getAttribute('data-name');
+        let type = button.getAttribute('data-type');
 
         // Recupero l'url per la richiesta
-        let url = `${window.location.origin}/admin/cars/${car_id}`;
+        let url = `${window.location.origin}/admin/${type}/${id}`;
 
-        // Reucpero la form
+        let space = document.getElementById('space');
+
+        space.textContent = id
+
+        // Recupero la form
         let delete_form = document.getElementById('delete_form');
 
-        const car_id_space = document.getElementById('car_id_space');
-
-        car_id_space.textContent = car_id;
 
         // Applico alla action della form l'url creato
         delete_form.setAttribute('action', url);
