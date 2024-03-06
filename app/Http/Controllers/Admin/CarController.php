@@ -9,6 +9,7 @@ use App\Models\Brand;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
 use PhpOption\Option;
+use Illuminate\Support\Facades\Storage;
 
 class CarController extends Controller
 {
@@ -47,8 +48,14 @@ class CarController extends Controller
 
 
         $cars = new Car();
-        
         $form_data = $request->all();
+
+        if($request->hasFile('img')) {
+            $path = Storage::disk('public')->put('cars_image', $form_data['img']);
+            $form_data['img'] = $path;
+        }
+
+        
         $cars->fill($form_data);
 
         $cars->save();
@@ -100,6 +107,16 @@ class CarController extends Controller
     public function update(UpdateCarRequest $request, Car $car)
     {
         $form_data = $request->all();
+
+        if($request->hasFile('img')){
+            if($car->img != null){
+                Storage::disk('public')->delete($car->img);
+            }
+
+            $path = Storage::disk('public')->put('cars_image', $form_data['img']);
+            $form_data['img'] = $path;
+        }
+
         $car->update($form_data);
 
         if ($request->has('optionals')) {
