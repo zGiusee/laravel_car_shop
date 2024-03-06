@@ -15,7 +15,7 @@ class Brand extends Model
         'office_number',
         'email',
         'website',
-        'office_adress'
+        'office_address'
     ];
 
     public function cars()
