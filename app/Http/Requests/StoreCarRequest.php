@@ -46,6 +46,8 @@ class StoreCarRequest extends FormRequest
             'power' => 'required',
             // 'paint_type' => 'nullable',
             // 'material_type' => 'nullable|string',
+            'img' => 'image|mimes:jpg,png,jpeg|max:2048'
+            
         ];
     }
     public function messages()
@@ -76,7 +78,10 @@ class StoreCarRequest extends FormRequest
             'engine_size.required' => 'La cilindrata del motore è obbligatoria.',
             'engine_size.numeric' => 'La cilindrata del motore deve essere un numero.',
             'brand_id.required' => 'Seleziona di quale brand è la macchina!',
-            'power.required' => 'La potenza del motore deve essere specificata'
+            'power.required' => 'La potenza del motore deve essere specificata',
+            'img.image' => 'Il file caricato deve essere un\'immagine.',
+            'img.mimes' => 'L\'immagine caricata deve essere in formato .jpg, .png o .jpeg.',
+            'img.max' => 'L\'immagine non può superare i 2048 kilobytes.'
         ];
     }
 }
