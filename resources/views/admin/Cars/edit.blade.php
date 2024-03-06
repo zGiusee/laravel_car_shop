@@ -63,6 +63,14 @@
                         @enderror
                     </div>
                     <div class="form-group mt-3">
+                        <label for="owners">Previous Owners</label>
+                        <input type="text" name="owners" id="owners"
+                            class="form-control @error('owners') is-invalid @enderror"  value="{{ old('owners') ?? $car->owners }}">
+                        @error('owners')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-3">
                         <label for="power">Power</label>
                         <input required type="text" name="power" id="power"
                             class="form-control @error('power') is-invalid @enderror"
@@ -120,7 +128,7 @@
                                     @if ($errors->any())
                                         <input type="checkbox" name="optionals[]" id="optional-{{ $optional->id }}"
                                             class="form-check-input" value="{{ $optional->id }}"
-                                            @checked(is_array(old('optionals')) && in_array(old('optionals')))>
+                                            @checked(is_array(old('optionals')) && in_array($optional->id, old('optionals')))>
                                     @else
                                         <input type="checkbox" name="optionals[]" id="optional-{{ $optional->id }}"
                                             class="form-check-input" value="{{ $optional->id }}"
