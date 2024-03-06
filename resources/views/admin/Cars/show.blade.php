@@ -4,14 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Car Details</h1>
+                <h1>Optional Details</h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12">
                 <div class="card" style="width: 50rem;">
-                    {{-- <img src="..." class="card-img-top" alt="..."> --}}
                     <div class="card-body">
                         <h5 class="card-title">Car Model: {{ $car->model }}</h5>
                         <div class="card-text">Price: {{ $car->price }}</div>

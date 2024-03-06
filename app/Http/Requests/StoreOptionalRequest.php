@@ -25,7 +25,7 @@ class StoreOptionalRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100',
-            'price' => 'required|numeric'
+            'price' => 'numeric|required',
         ];
     }
 

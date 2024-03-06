@@ -110,6 +110,10 @@
                         <li>
                             <a href="{{ route('admin.brands.index') }}"> <i class="bi bi-table me-2"></i> Brands</a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin.optionals.index') }}"><i
+                                    class="bi bi-table me-2"></i>Optionals</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-10">
