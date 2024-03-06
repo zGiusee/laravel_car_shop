@@ -34,7 +34,7 @@ class CarController extends Controller
         $cars = DB::table('cars')
             ->join('brands', 'brands.id', '=', 'cars.brand_id')
             ->where('brands.id', $id)
-            ->get();
+            ->paginate(4);
 
         return response()->json([
             'succes' => true,
