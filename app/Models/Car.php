@@ -40,7 +40,7 @@ class Car extends Model
         return $this->belongsToMany(Optional::class);
     }
 
-    public function brands()
+    public function brand()
     {
         return $this->belongsTo(Brand::class);
     }
