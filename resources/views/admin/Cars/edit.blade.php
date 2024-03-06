@@ -7,25 +7,27 @@
             {{-- DISPLAY SUMMIT DI ERRORI  --}}
             <div class="col-6">
                 @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                        <li>{{ $error }} </li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }} </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
 
             {{-- INIZIO FORM  --}}
             <div class="col-12 mt-3">
-                <form action="{{ route('admin.cars.update', ['car' => $car->id]) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.cars.update', ['car' => $car->id]) }}" method="post"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group mt-3">
                         <label for="price" class="control-label">Price</label>
                         <input required type="text" name="price" id="price"
-                            class="form-control @error('price') is-invalid @enderror" value="{{ old('price') ?? $car->price }}">
+                            class="form-control @error('price') is-invalid @enderror"
+                            value="{{ old('price') ?? $car->price }}">
                         @error('price')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -33,7 +35,8 @@
                     <div class="form-group mt-3">
                         <label for="model">Model</label>
                         <input required type="text" name="model" id="model"
-                            class="form-control @error('model') is-invalid @enderror" value="{{ old('model') ?? $car->model }}">
+                            class="form-control @error('model') is-invalid @enderror"
+                            value="{{ old('model') ?? $car->model }}">
                         @error('model')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -43,7 +46,8 @@
                         <select class="form-select" name="brand_id" id="brand_id">
                             <option value="">Select an option</option>
                             @foreach ($brands as $brand)
-                            <option value="{{ $brand->id }}" @selected($brand->id == old('brand_id'))>{{ $brand->name }}</option>
+                                <option value="{{ $brand->id }}" @selected($brand->id == old('brand_id'))>{{ $brand->name }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -61,7 +65,8 @@
                     <div class="form-group mt-3">
                         <label for="power">Power</label>
                         <input required type="text" name="power" id="power"
-                            class="form-control @error('power') is-invalid @enderror" value="{{ old('power') ?? $car->power }}">
+                            class="form-control @error('power') is-invalid @enderror"
+                            value="{{ old('power') ?? $car->power }}">
                         @error('power')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -69,7 +74,8 @@
                     <div class="form-group mt-3">
                         <label for="year">Year</label>
                         <input required type="text" name="year" id="year"
-                            class="form-control @error('year') is-invalid @enderror" value="{{ old('year') ?? $car->year }}">
+                            class="form-control @error('year') is-invalid @enderror"
+                            value="{{ old('year') ?? $car->year }}">
                         @error('year')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -77,7 +83,8 @@
                     <div class="form-group mt-3">
                         <label for="color">Color</label>
                         <input required type="text" name="color" id="color"
-                            class="form-control @error('color') is-invalid @enderror" value="{{ old('color') ?? $car->color }}">
+                            class="form-control @error('color') is-invalid @enderror"
+                            value="{{ old('color') ?? $car->color }}">
                         @error('color')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -86,7 +93,8 @@
                     <div class="form-group mt-3">
                         <label for="fuel_type">Fuel Type</label>
                         <input required type="text" name="fuel_type" id="fuel_type"
-                            class="form-control @error('fuel_type') is-invalid @enderror" value="{{ old('fuel_type') ?? $car->fuel_type }}">
+                            class="form-control @error('fuel_type') is-invalid @enderror"
+                            value="{{ old('fuel_type') ?? $car->fuel_type }}">
                         @error('fuel_type')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -127,7 +135,8 @@
                     <div class="form-group mt-3">
                         <label for="seats">Seats</label>
                         <input required type="text" name="seats" id="seats"
-                            class="form-control @error('seats') is-invalid @enderror" value="{{ old('seats') ?? $car->seats }}">
+                            class="form-control @error('seats') is-invalid @enderror"
+                            value="{{ old('seats') ?? $car->seats }}">
                         @error('seats')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -153,8 +162,9 @@
                     </div>
                     <div class="form-group mt-3">
                         <label for="img">Image</label>
-                        <input type="file" name="img" id="img" 
-                            class="form-control @error('img') is-invalid @enderror" value="{{ old('img') ?? $car->img }}">
+                        <input type="file" name="img" id="img"
+                            class="form-control @error('img') is-invalid @enderror"
+                            value="{{ old('img') ?? $car->img }}">
                         @error('img')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
