@@ -80,7 +80,10 @@ class BrandController extends Controller
      */
     public function update(UpdateBrandRequest $request, Brand $brand)
     {
-        //
+        $form_data = $request->all();
+        $brand->update($form_data);
+
+        return redirect()->route('admin.brands.index', ['brand' =>  $brand->id]);
     }
 
     /**
