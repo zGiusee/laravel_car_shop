@@ -5,7 +5,7 @@
 
 $purle: #940b92;
 $dark_purple: #610c9f;
-$pink: #DA0C81;
+$pink: #da0c81;
 $dark_pink: #e95793;
 
 * {
@@ -14,12 +14,11 @@ $dark_pink: #e95793;
     box-sizing: border-box;
 }
 
-.main-container{
+.main-container {
     overflow-x: hidden;
-   
 }
 
-.content-container{
+.content-container {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: calc(100vh - 70px);
@@ -35,7 +34,6 @@ $dark_pink: #e95793;
     text-transform: uppercase;
     font-size: 20px;
 
-
     li {
         margin: 20px 0px;
     }
@@ -46,6 +44,7 @@ $dark_pink: #e95793;
 
         &:hover {
             text-decoration: underline;
+            color: #940b92;
         }
     }
 }
@@ -90,4 +89,12 @@ $dark_pink: #e95793;
     width: 700px;
     height: 400px;
     object-fit: cover;
+}
+
+.my-nav {
+    background-color: #610c9f;
+
+    #bool3shop_logo {
+        width: 180px;
+    }
 }
