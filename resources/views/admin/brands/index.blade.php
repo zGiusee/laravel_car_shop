@@ -24,10 +24,12 @@
                         <td>{{ $brand->name }}</td>
                         <td>{{ $brand->address }}</td>
                         <td>
-                            <a class="my_button" href="{{ route('admin.brands.show', ['brand' => $brand->id]) }}">Details</a>
+                            <a class="my_button"
+                                href="{{ route('admin.brands.show', ['brand' => $brand->id]) }}">Details</a>
 
-                            <button class="my_button delete_button" data-bs-toggle="modal" data-bs-target="#brands_delete_modal"
-                                type="button" data-id="{{ $brand->id }}" data-name="{{ $brand->name }}" data-type="brands"> Delete
+                            <button class="my_button delete_button" data-bs-toggle="modal"
+                                data-bs-target="#brands_delete_modal" type="button" data-id="{{ $brand->id }}"
+                                data-name="{{ $brand->name }}" data-type="brands"> Delete
                             </button>
 
                             <a class="my_button" href="{{ route('admin.brands.edit', ['brand' => $brand->id]) }}">Mod</a>
