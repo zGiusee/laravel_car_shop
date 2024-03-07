@@ -52,7 +52,7 @@
                                 <select class="form-select" name="brand_id" id="brand_id">
                                     <option value="">Select an option</option>
                                     @foreach ($brands as $brand)
-                                        <option value="{{ $brand->id }}" @selected($brand->id == old('brand_id'))>{{ $brand->name }}
+                                        <option value="{{ $brand->id }}" @selected($brand->id == old('brand_id', $car->brand ? $car->brand->id : ''))>{{ $brand->name }}
                                         </option>
                                     @endforeach
                                 </select>
@@ -101,9 +101,9 @@
                                 <label for="used"><i>Used?</i></label>
                                 <select class="form-select @error('used') is-invalid @enderror" name="used"
                                     id="used">
-                                    <option value="0">Select an option</option>
-                                    <option value="1" @selected(old('used') == 1)>Usata</option>
-                                    <option value="2" @selected(old('used') == 2)>Nuova</option>
+                                    <option value="">Select an option</option>
+                                    <option value="0" @selected($car->used == old('used', $car->used ? $car->used : '0'))>Usata</option>
+                                    <option value="1" @selected($car->used == old('used', $car->used ? $car->used : '1'))>Nuova</option>
                                 </select>
                                 @error('used')
                                     <div class="text-danger"> {{ $message }}</div>
@@ -157,7 +157,7 @@
                                             @if ($errors->any())
                                                 <input type="checkbox" name="optionals[]"
                                                     id="optional-{{ $optional->id }}" class="form-check-input"
-                                                    value="{{ $optional->id }}" @checked(is_array(old('optionals')) && in_array(old('optionals')))>
+                                                    value="{{ $optional->id }}" @checked(is_array(old('optionals')) && in_array($car->optionals, old('optionals')))>
                                             @else
                                                 <input type="checkbox" name="optionals[]"
                                                     id="optional-{{ $optional->id }}" class="form-check-input"
