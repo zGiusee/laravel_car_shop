@@ -99,7 +99,7 @@
                     <div class="my-sidebar">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#"><i class="bi bi-list me-1"></i> Dashboard</a>
+                                <a href="{{ route('admin.dashboard') }}"><i class="bi bi-list me-1"></i> Dashboard</a>
                             </li>
                             <li>
                                 <a href="{{ route('admin.cars.index') }}"> <i class="fas fa-car me-"></i> Cars</a>

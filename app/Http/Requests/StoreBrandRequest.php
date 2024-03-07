@@ -42,7 +42,7 @@ class StoreBrandRequest extends FormRequest
             'email.required' => 'L\'email è obbligatoria.',
             'email.max' => 'L\'email non può superare i :max caratteri.',
             'website.max' => 'Il sito web non può superare i :max caratteri.',
-            'webiste.required' => 'Il sito è obbligatorio.',
+            'webiste.required' => 'Il  è obbligatorio.',
             'office_address.max' => 'L\'indirizzo d\'ufficio non può superare i :max caratteri.',
         ];
     }
