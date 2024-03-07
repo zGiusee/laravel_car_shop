@@ -11,7 +11,7 @@ class CarController extends Controller
 {
     public function index()
     {
-        $cars = Car::with('optionals', 'brand')->paginate(8);
+        $cars = Car::with('optionals', 'brand')->paginate(9);
 
         return response()->json([
             'succes' => true,
@@ -34,7 +34,7 @@ class CarController extends Controller
         $cars = DB::table('cars')
             ->join('brands', 'brands.id', '=', 'cars.brand_id')
             ->where('brands.id', $id)
-            ->paginate(4);
+            ->paginate(9);
 
         return response()->json([
             'succes' => true,
