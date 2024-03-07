@@ -97,27 +97,34 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="main-container">
             <div class="row">
-                <div class="col-2 my-sidebar">
-                    <ul class="list-unstyled">
-                        <li>
-                            <i class="bi bi-list me-2"></i> Dashboard
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.cars.index') }}"> <i class="bi bi-table me-2"></i> Cars</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.brands.index') }}"> <i class="bi bi-table me-2"></i> Brands</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.optionals.index') }}"><i
-                                    class="bi bi-table me-2"></i>Optionals</a>
-                        </li>
-                    </ul>
+
+                <div class="col-2 p-0">
+                    <div class="my-sidebar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <i class="bi bi-list me-2"></i> Dashboard
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.cars.index') }}"> <i class="bi bi-table me-2"></i> Cars</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.brands.index') }}"> <i class="bi bi-table me-2"></i>
+                                    Brands</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.optionals.index') }}"><i
+                                        class="bi bi-table me-2"></i>Optionals</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="col-10 p-0">
-                    @yield('content')
+                    <div class="content-container">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
         </main>

@@ -9,14 +9,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.main-container{
     overflow-x: hidden;
+   
+}
+
+.content-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 70px);
 }
 
 .my-sidebar {
     background-color: #f2f2f2;
     color: rgb(61, 61, 61);
-    height: calc(100vh + 150px);
     padding: 30px;
+    height: calc(100vh - 70px);
     border-right: 10px solid #e2e2e2;
     font-family: "Roboto Condensed";
     text-transform: uppercase;

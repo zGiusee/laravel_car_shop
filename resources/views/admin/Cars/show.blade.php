@@ -130,7 +130,8 @@
                         </li>
 
                         <li class="my-2"><span class="text-uppercase fw-bolder">Paynt type:</span>
-                            <span class="fst-italic">{{ $car->paint_type }}</span>
+                            <span
+                                class="fst-italic">{{ $car->paint_type != null ? $car->paint_type : 'Not available' }}</span>
                         </li>
 
                         <li class="my-2"><span class="text-uppercase fw-bolder">Material type</span>
