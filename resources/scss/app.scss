@@ -110,13 +110,15 @@ a{
 }
 
 .image_container {
-    width: 700px;
-    height: 400px;
+    img{
+        width: 700px;
+        height: 400px;
+    }
     object-fit: cover;
 }
 
 .my-nav {
-    background-color: #610c9f;
+    background-color: black;
 
     #bool3shop_logo {
         width: 180px;
