@@ -89,6 +89,14 @@
                         @enderror
                     </div>
                     <div class="form-group mt-3">
+                        <label for="owners">Previous Owners</label>
+                        <input type="text" name="owners" id="owners"
+                            class="form-control @error('owners') is-invalid @enderror"  value="{{ old('owners') }}">
+                        @error('owners')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-3">
                         <label for="optional">Select Optional</label>
                         <div>
                             @foreach ($optionals as $optional)

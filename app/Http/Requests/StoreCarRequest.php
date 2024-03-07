@@ -27,7 +27,6 @@ class StoreCarRequest extends FormRequest
             'price' => 'required|numeric',
             'model' => 'required|max:50',
             'km' => 'numeric',
-            // 'img' => 'nullable|url',
             'immatricolation_year' => 'numeric',
             'plate' => 'unique:cars',
             'year' => 'required|numeric',
@@ -44,8 +43,6 @@ class StoreCarRequest extends FormRequest
             'material_type' => 'nullable|string',
             'brand_id' => 'required|exists:brands,id',
             'power' => 'required',
-            // 'paint_type' => 'nullable',
-            // 'material_type' => 'nullable|string',
             'img' => 'image|mimes:jpg,png,jpeg|max:2048'
             
         ];
