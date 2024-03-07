@@ -98,26 +98,27 @@
         </nav>
 
         <main class="">
-            <div class="row">
-                <div class="col-2 my-sidebar">
-                    <ul class="list-unstyled">
-                        <li>
-                            <i class="bi bi-list me-2"></i> Dashboard
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.cars.index') }}"> <i class="bi bi-table me-2"></i> Cars</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.brands.index') }}"> <i class="bi bi-table me-2"></i> Brands</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.optionals.index') }}"><i
-                                    class="bi bi-table me-2"></i>Optionals</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-10 p-0">
-                    @yield('content')
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center mt-5">
+                        <ul class="my-list">
+                            <li>
+                                {{-- <a href="{{ route('admin.dashboard.index') }}"><i class="bi bi-list me-2"></i> Dashboard</a> --}}
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.cars.index') }}" class="hover-a"> <i class="fa-solid fa-car" style="color: #000000;"></i> Cars</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.brands.index') }}"class="hover-a"> <i class="fa-solid fa-list-check" style="color: #000000;"></i> Brands</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.optionals.index') }}"class="hover-a"> <i class="fa-solid fa-plus" style="color: #000000;"></i> Optionals</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
         </main>
