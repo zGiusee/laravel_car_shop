@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="bg-secondary p-5">
+    <div class="bg-dark p-5 mt-4">
         <main class="bg-white pb-5">
             <div class="container py-3">
                 <div class="row">

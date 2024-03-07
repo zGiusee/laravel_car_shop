@@ -7,15 +7,15 @@
             </div>
             <div class="modal-body">
                 <p>
-                    Sei sicuro di voler eliminare il brand con id <span id="space"></span>? 
+                    Are you sure you want to delete the brand with id <span id="space"></span>? 
                 </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel delete</button>
+                <button type="button" class="btn btn-dark px-4" data-bs-dismiss="modal"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>
                 <form method="POST" id="delete_form" action="">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-primary">Confirm delete</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
                 </form>
             </div>
         </div>
