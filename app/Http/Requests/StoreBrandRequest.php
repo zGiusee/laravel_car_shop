@@ -27,12 +27,13 @@ class StoreBrandRequest extends FormRequest
             'name' => 'required|max:80',
             'office_number' => 'required|max:30',
             'email' => 'required|max:100',
-            'website' => 'max:100',
-            'office_address' => 'max:100',
+            'website' => 'required|max:100',
+            'office_address' => 'required|max:100',
         ];
     }
 
-    public function messages() {
+    public function messages()
+    {
         return [
             'name.required' => 'Il nome è obbligatorio.',
             'name.max' => 'Il nome non può superare i :max caratteri.',
@@ -41,6 +42,7 @@ class StoreBrandRequest extends FormRequest
             'email.required' => 'L\'email è obbligatoria.',
             'email.max' => 'L\'email non può superare i :max caratteri.',
             'website.max' => 'Il sito web non può superare i :max caratteri.',
+            'webiste.required' => 'Il sito è obbligatorio.',
             'office_address.max' => 'L\'indirizzo d\'ufficio non può superare i :max caratteri.',
         ];
     }
