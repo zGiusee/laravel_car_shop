@@ -8,6 +8,10 @@ $dark_purple: #610c9f;
 $pink: #da0c81;
 $dark_pink: #e95793;
 
+body{
+    overflow-y: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,11 +19,9 @@ $dark_pink: #e95793;
 }
 
 .main-container {
-.main-container {
     overflow-x: hidden;
 }
 
-.content-container {
 .content-container {
     overflow-y: auto;
     overflow-x: hidden;
@@ -125,4 +127,14 @@ a{
     #bool3shop_logo {
         width: 180px;
     }
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

@@ -93,7 +93,7 @@
         </nav>
 
         <main class="main-container">
-            <div class="row">
+            <div class="row m-0">
 
                 <div class="col-2 p-0">
                     <div class="my-sidebar">
